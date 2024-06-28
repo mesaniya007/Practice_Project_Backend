@@ -1,0 +1,50 @@
+[
+  {
+    "ContainingType": "user_crud_api.Controllers.AuthController",
+    "Method": "GetUserByEmail",
+    "RelativePath": "api/Auth/getUserByEmail",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "user_crud_api.Data.Email",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "user_crud_api.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/Auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "user_crud_api.Data.Login",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "user_crud_api.Controllers.UserController",
+    "Method": "AddNewUser",
+    "RelativePath": "api/User",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "user",
+        "Type": "user_crud_api.Data.User",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

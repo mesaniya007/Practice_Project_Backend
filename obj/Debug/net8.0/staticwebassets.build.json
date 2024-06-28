@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "g1D+R6UXnW0fcOMVOa7zaSMWZCeNP5VGDZFIzEU9bP4=",
+  "Source": "user-crud-api",
+  "BasePath": "_content/user-crud-api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
