@@ -1,13 +1,13 @@
 ﻿namespace user_crud_api.Helpers
 {
-    public static class PasswordHasher
+    public class PasswordHasher
     {
-        public static string HashPassword(string password)
+        public string HashPassword(string password)
         {
             return BCrypt.Net.BCrypt.HashPassword(password);
         }
 
-        public static bool VerifyPassword(string password, string hashedPassword)
+        public bool VerifyPassword(string password, string hashedPassword)
         {
             return BCrypt.Net.BCrypt.Verify(password, hashedPassword);
         }

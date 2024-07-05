@@ -8,6 +8,7 @@ using Newtonsoft.Json.Linq;
 using System.IdentityModel.Tokens.Jwt;
 using System.Text;
 using user_crud_api.Data;
+using user_crud_api.Helpers;
 
 namespace user_crud_api.Controllers
 {
@@ -28,12 +29,13 @@ namespace user_crud_api.Controllers
         {
             DB_Context db = new DB_Context();
             Login login = new Login();
+            PasswordHasher passwordHasher =  new PasswordHasher();
             login = db.getUserByEmail(model.Email);
             if (login.Email is null)
             {
                 return BadRequest(new { error = "Email does not exist..!" });
             }
-            if (!BCrypt.Net.BCrypt.Verify(model.Password, login.Password))
+            if (!passwordHasher.VerifyPassword(model.Password, login.Password))
             {
                 return BadRequest(new { error = "Password Incorrect..!" });
             }
